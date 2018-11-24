@@ -8,23 +8,20 @@ body {
   font-family: "Lato", sans-serif;
   color: #fff;
   background: #333;
-}
-
-.wrapper {
-  position: relative;
   background-image: url("../img/background.jpeg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   height: 100vh;
+  position: relative;
 }
 
-.wrapper-inner {
+.wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
 
@@ -45,4 +42,150 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 6px;
+}
+
+.countdown {
+  font-size: 50px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.countdown div {
+  padding: 20px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 15px;
+  min-width: 135px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.countdown span {
+  display: block;
+  font-size: 25px;
+}
+
+.subscribe {
+  width: 600px;
+  margin: 40px auto;
+}
+
+.subscribe-text {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.subscribe-email {
+  background-image: url("../img/envelope.svg");
+  background-color: transparent;
+  background-size: 30px 30px;
+  background-position: 5px 8px;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 22px;
+  font-size: 16px;
+  padding: 13px 13px 13px 45px;
+  margin: 35px 0;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+
+.submit-button {
+  position: relative;
+  display: block;
+  background: none;
+  color: #fff;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  z-index: 2;
+}
+
+.submit-button:hover {
+  color: #000;
+}
+
+.submit-button::after {
+  background-color: #fff;
+  content: "";
+  position: absolute;
+  height: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  transition: all 0.2s ease-out;
+}
+
+.submit-button:hover::after {
+  height: 100%;
+}
+
+.socials {
+  width: 90%;
+  margin: 80px auto 40px auto;
+  text-align: center;
+}
+
+.socials i {
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.fa-twitter:hover {
+  color: #00aced;
+}
+
+.fa-instagram:hover {
+  color: #bc2a8d;
+}
+
+.fa-pinterest:hover {
+  color: #c8232c;
+}
+
+.fa-linkedin-in:hover {
+  color: #4875b4;
+}
+
+@media (max-width: 650px) {
+  .countdown {
+    flex-direction: column;
+  }
+
+  .comingsoon {
+    font-size: 60px;
+  }
+
+  .subscribe {
+    width: 90%;
+  }
+
+  .logo-row {
+    padding: 30px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 300px) {
+  .comingsoon {
+    font-size: 40px;
+  }
 }
