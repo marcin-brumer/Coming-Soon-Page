@@ -40,37 +40,56 @@ body {
 
 .comingsoon {
   font-size: 80px;
-  font-weight: 400;
+  font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 6px;
+  margin-top: 20px;
 }
 
 .countdown {
-  font-size: 50px;
-  font-weight: 600;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 60%;
+  min-width: 800px;
+}
+
+.container {
+  position: relative;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.label {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.countdown div {
-  padding: 20px;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  margin: 15px;
-  min-width: 135px;
-  background-color: rgba(0, 0, 0, 0.4);
+.label span:first-of-type {
+  font-size: 55px;
+  color: #fff;
 }
 
-.countdown span {
-  display: block;
-  font-size: 25px;
+.label span:nth-of-type(2) {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .subscribe {
   width: 600px;
-  margin: 40px auto;
+  margin: 50px auto;
 }
 
 .subscribe-text {
@@ -135,7 +154,7 @@ body {
 
 .socials {
   width: 90%;
-  margin: 80px auto 40px auto;
+  margin: 60px auto 40px auto;
   text-align: center;
 }
 
@@ -166,11 +185,17 @@ body {
   color: #4875b4;
 }
 
-@media (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .countdown {
     flex-direction: column;
+    align-items: center;
+    height: 900px;
+    width: auto;
+    min-width: auto;
   }
+}
 
+@media screen and (max-width: 650px) {
   .comingsoon {
     font-size: 60px;
   }
@@ -185,7 +210,7 @@ body {
   }
 }
 
-@media (max-width: 300px) {
+@media screen and (max-width: 300px) {
   .comingsoon {
     font-size: 40px;
   }

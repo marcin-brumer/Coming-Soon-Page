@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:100"
+      href="https://fonts.googleapis.com/css?family=Lato:100,400"
       rel="stylesheet"
     />
     <link
@@ -24,7 +24,84 @@
       </div>
       <div class="content">
         <h1 class="comingsoon">Coming Soon</h1>
-        <div class="countdown"></div>
+        <div class="countdown">
+          <div class="container days">
+            <canvas id="days-canvas" width="200" height="200"></canvas>
+            <svg width="200" height="200">
+              <circle
+                id="outer"
+                cx="100"
+                cy="100"
+                r="90"
+                fill="transparent"
+                stroke-width="20"
+                stroke="#47FFAF"
+                opacity="0.1"
+              />
+            </svg>
+            <div class="label">
+              <span id="days-value"></span><br />
+              <span>days</span>
+            </div>
+          </div>
+          <div class="container hours">
+            <canvas id="hours-canvas" width="200" height="200"></canvas>
+            <svg width="200" height="200">
+              <circle
+                id="outer"
+                cx="100"
+                cy="100"
+                r="90"
+                fill="transparent"
+                stroke-width="20"
+                stroke="#FFA246"
+                opacity="0.1"
+              />
+            </svg>
+            <div class="label">
+              <span id="hours-value"></span><br />
+              <span>hours</span>
+            </div>
+          </div>
+          <div class="container minutes">
+            <canvas id="minutes-canvas" width="200" height="200"></canvas>
+            <svg width="200" height="200">
+              <circle
+                id="outer"
+                cx="100"
+                cy="100"
+                r="90"
+                fill="transparent"
+                stroke-width="20"
+                stroke="#E834B1"
+                opacity="0.1"
+              />
+            </svg>
+            <div class="label">
+              <span id="minutes-value"></span><br />
+              <span>minutes</span>
+            </div>
+          </div>
+          <div class="container seconds">
+            <canvas id="seconds-canvas" width="200" height="200"></canvas>
+            <svg width="200" height="200">
+              <circle
+                id="outer"
+                cx="100"
+                cy="100"
+                r="90"
+                fill="transparent"
+                stroke-width="20"
+                stroke="#3A55FF"
+                opacity="0.1"
+              />
+            </svg>
+            <div class="label">
+              <span id="seconds-value"></span><br />
+              <span>seconds</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="subscribe">
         <p class="subscribe-text">
