@@ -19,6 +19,7 @@ function render() {
   c.context.seconds.strokeStyle = "#3A55FF";
   c.context.seconds.arc(100, 100, 90, deg(0), deg(6 * (60 - c.times.seconds)));
   c.context.seconds.lineWidth = 20;
+  c.context.seconds.lineCap = "round";
   c.context.seconds.stroke();
 
   c.context.minutes.clearRect(0, 0, 200, 200);
@@ -26,6 +27,7 @@ function render() {
   c.context.minutes.strokeStyle = "#E834B1";
   c.context.minutes.arc(100, 100, 90, deg(0), deg(6 * (60 - c.times.minutes)));
   c.context.minutes.lineWidth = 20;
+  c.context.minutes.lineCap = "round";
   c.context.minutes.stroke();
 
   c.context.hours.clearRect(0, 0, 200, 200);
@@ -33,6 +35,7 @@ function render() {
   c.context.hours.strokeStyle = "#FFA246";
   c.context.hours.arc(100, 100, 90, deg(0), deg(15 * (24 - c.times.hours)));
   c.context.hours.lineWidth = 20;
+  c.context.hours.lineCap = "round";
   c.context.hours.stroke();
 
   c.context.days.clearRect(0, 0, 200, 200);
@@ -40,6 +43,7 @@ function render() {
   c.context.days.strokeStyle = "#47FFAF";
   c.context.days.arc(100, 100, 90, deg(0), deg(365 - c.times.days));
   c.context.days.lineWidth = 20;
+  c.context.days.lineCap = "round";
   c.context.days.stroke();
 }
 
